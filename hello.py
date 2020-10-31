@@ -68,7 +68,7 @@ def about():
 def register():
     form = Registrationform()
     if form.validate_on_submit():
-        flash(f"account created for {form.username.data}! ", 'success')
+        flash(f"account created for {form.username.data}!", 'success')
         return redirect(url_for('home'))
 
     return render_template("register.html", title="register", form=form)
